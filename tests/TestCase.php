@@ -5,7 +5,7 @@
  * @package Dekode\NinjaForms\Azure\Tests
  */
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 namespace Dekode\NinjaForms\Azure\Tests;
 

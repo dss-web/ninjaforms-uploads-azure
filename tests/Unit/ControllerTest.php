@@ -5,7 +5,7 @@
  * @package Dekode\NinjaForms\Azure\Tests\Unit
  */
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 namespace Dekode\NinjaForms\Azure\Tests\Unit;
 
@@ -84,11 +84,11 @@ class ControllerTest extends TestCase {
 	 */
 	public static function container_name_provider(): array {
 		return [
-			'simple domain'       => [ 'https://example.com', 'example-com' ],
-			'subdomain'           => [ 'https://blog.example.com', 'blog-example-com' ],
-			'with port'           => [ 'https://localhost:8080', 'localhost' ],
-			'uppercase'           => [ 'https://EXAMPLE.COM', 'example-com' ],
-			'special characters'  => [ 'https://my_site.example.com', 'my-site-example-com' ],
+			'simple domain'      => [ 'https://example.com', 'example-com' ],
+			'subdomain'          => [ 'https://blog.example.com', 'blog-example-com' ],
+			'with port'          => [ 'https://localhost:8080', 'localhost' ],
+			'uppercase'          => [ 'https://EXAMPLE.COM', 'example-com' ],
+			'special characters' => [ 'https://my_site.example.com', 'my-site-example-com' ],
 		];
 	}
 

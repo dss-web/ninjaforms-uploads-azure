@@ -24,9 +24,7 @@
 		}
 	},
 	"scripts": {
-		"post-install-cmd": [
-
-		],
+		"post-install-cmd": [],
 		"lint": [
 			"./vendor/bin/phpcs ."
 		],
