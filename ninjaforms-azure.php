@@ -6,23 +6,23 @@
  * Author:          Dekode
  * Author URI:      https://dekode.no
  * Text Domain:     dekode-ninjaforms-azure
- * Version:         1.1.1
+ * Version:         1.2.0
  *
  * @package DekodeNinjaFormsAzure
  */
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 namespace Dekode\NinjaForms\Azure;
 
-define( 'DEKODE_NINJAFORMS_AZURE_VERSION', '1.1.0' );
+define( 'DEKODE_NINJAFORMS_AZURE_VERSION', '1.2.0' );
 define( 'DEKODE_NINJAFORMS_AZURE_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 
-add_action( 'plugins_loaded', function() {
+add_action( 'plugins_loaded', function () {
 	// Check that te NinjaForms File Upload plugin is loaded before we try extending it.
 	if ( ! class_exists( '\NF_FU_External_Abstracts_Service' ) ) {
 		return;
