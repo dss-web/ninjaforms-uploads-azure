@@ -2,18 +2,26 @@
 	"name": "dss-web/ninjaforms-uploads-azure",
 	"description": "Add support for offloading Ninja Forms Uploads to the Microsoft Azure cloud.",
 	"type": "wordpress-plugin",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"license": "GPL-3.0-or-later",
 	"prefer-stable": true,
 	"minimum-stability": "dev",
 	"require": {
-		"php": ">=7.2",
-		"microsoft/azure-storage-file": "~1.2.4",
-		"microsoft/azure-storage-blob": "~1.5.2",
-		"guzzlehttp/psr7": "~1.8"
+		"php": ">=8.1",
+		"microsoft/azure-storage-file": "^1.2",
+		"microsoft/azure-storage-blob": "^1.5",
+		"guzzlehttp/psr7": "^2.0"
 	},
 	"require-dev": {
-		"dekode/coding-standards": "4.0.0"
+		"dekode/coding-standards": "^4.0",
+		"phpunit/phpunit": "^10.5",
+		"brain/monkey": "^2.6",
+		"mockery/mockery": "^1.6"
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Dekode\\NinjaForms\\Azure\\Tests\\": "tests/"
+		}
 	},
 	"scripts": {
 		"post-install-cmd": [
@@ -24,6 +32,17 @@
 		],
 		"build": [
 			"@composer install"
+		],
+		"test": [
+			"./vendor/bin/phpunit"
+		],
+		"test:coverage": [
+			"./vendor/bin/phpunit --coverage-html coverage"
 		]
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	}
 }

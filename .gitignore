@@ -23,6 +23,13 @@ public/content/object-cache.php
 # Composer
 vendor
 
+# PHPUnit
+.phpunit.cache
+coverage
+
+# Azurite
+azurite
+
 # Composer Plugins
 plugins/*/wp-content
 plugins/*/composer.lock
